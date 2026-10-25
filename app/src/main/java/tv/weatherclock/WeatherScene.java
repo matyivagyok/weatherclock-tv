@@ -163,6 +163,7 @@ final class WeatherScene {
         t.setTextSize(TypedValue.COMPLEX_UNIT_SP, sp);
         t.setTextColor(color);
         t.setLetterSpacing(spacing);
+        t.setGravity(Gravity.CENTER_HORIZONTAL);   // the views fill their column, so centre the text in it
         if (font != 0) t.setTypeface(context.getResources().getFont(font));
         return t;
     }
