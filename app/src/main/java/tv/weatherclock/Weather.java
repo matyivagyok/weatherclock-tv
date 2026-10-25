@@ -236,7 +236,9 @@ final class Weather {
         if (code == 1) return day ? "🌤️" : "🌙";
         if (code == 2) return "⛅";
         if (code == 3) return "☁️";
-        if (code == 45 || code == 48) return "🌫️";
+        // Noto Color Emoji, the emoji font on Android TV and Google TV, draws 🌫️ as a full square picture, which
+        // reads as a white box beside the other cut-out icons. Use the plain cloud; the text next to it says "Fog".
+        if (code == 45 || code == 48) return "☁️";
         if ((code >= 51 && code <= 57) || (code >= 80 && code <= 82)) return "🌦️";
         if (code >= 61 && code <= 67) return "🌧️";
         if ((code >= 71 && code <= 77) || code == 85 || code == 86) return "🌨️";
